@@ -1,0 +1,15 @@
+WASSERSCHADEN-APP
+=================
+
+Dieses Paket gehört ausschliesslich zur Wasserschaden-App.
+Enthalten sind:
+- Schadenserfassung
+- Mehrere Fotos pro Schaden
+- Fotogalerie und einzelne Fotos löschen
+- Arbeitszeiterfassung
+- Gemeinsame Nutzung über Supabase
+- Login
+- CSV-/Druck-Export
+- GitHub-Pages-Vorbereitung
+
+Projektordner auf GitHub empfohlen: wasserschaden-app

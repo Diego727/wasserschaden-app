@@ -1,0 +1,14 @@
+WASSERSCHADEN-APP – REIHENFOLGE
+
+1. Supabase-Projekt erstellen.
+2. supabase_setup.sql im Supabase SQL Editor ausführen.
+3. In Supabase zwei Benutzer anlegen (du + deine Frau).
+4. Project URL + öffentlichen Publishable/Anon Key kopieren.
+5. Diese zwei Werte in config.js eintragen.
+6. Alle Dateien dieses Ordners in ein GitHub Repository hochladen.
+7. GitHub Pages für Branch main / root aktivieren.
+8. GitHub-Pages-Link auf beiden Handys öffnen und anmelden.
+9. In der App: Mehr > Konto / Name -> je Gerät den Namen eintragen.
+10. Safari: Teilen > Zum Home-Bildschirm.
+
+NIEMALS einen Supabase service_role Key in config.js eintragen.
