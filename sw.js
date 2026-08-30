@@ -1,8 +1,3 @@
-const CACHE='wasserschaden-v1';
-const CORE=['./','./index.html','./config.js','./manifest.webmanifest','./icon.svg'];
-self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE))));
-self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k))))));
-self.addEventListener('fetch',e=>{
-  if(e.request.method!=='GET') return;
-  e.respondWith(fetch(e.request).then(r=>{const copy=r.clone();caches.open(CACHE).then(c=>c.put(e.request,copy));return r}).catch(()=>caches.match(e.request)));
-});
+// Wasserschaden V2: alter Offline-Cache wird absichtlich entfernt.
+self.addEventListener('install',event=>{self.skipWaiting()});
+self.addEventListener('activate',event=>{event.waitUntil((async()=>{for(const key of await caches.keys())if(key.startsWith('wasserschaden-'))await caches.delete(key);await self.registration.unregister();const clientsList=await self.clients.matchAll({type:'window'});for(const client of clientsList)client.navigate(client.url)})())});
